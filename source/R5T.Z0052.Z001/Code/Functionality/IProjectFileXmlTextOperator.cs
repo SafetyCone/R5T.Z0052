@@ -22,7 +22,7 @@ namespace R5T.Z0052.Z001
 
         public async Task<IProjectFileXmlText> Get_ProjectFileXmlText_FromFilePath(IFilePath textFilePath)
         {
-            var text = await Instances.FileOperator.ReadText(textFilePath.Value);
+            var text = await Instances.FileOperator.Read_Text(textFilePath.Value);
 
             var output = text.ToProjectFileXmlText();
             return output;
